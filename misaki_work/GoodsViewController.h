@@ -10,4 +10,6 @@
 
 @interface GoodsViewController : UITableViewController
 
+@property NSArray *goodsNumber;
+@property NSDictionary *category;
 @end

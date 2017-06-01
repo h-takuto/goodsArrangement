@@ -10,6 +10,12 @@
 
 @interface ViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *goodsNumberField;
+@property (weak, nonatomic) IBOutlet UITextField *categoryField;
+
+- (IBAction)addGoods:(id)sender;
+- (IBAction)addCategory:(id)sender;
+- (IBAction)removeData:(id)sender;
 
 @end
 
