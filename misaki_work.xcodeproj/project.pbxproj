@@ -1,0 +1,545 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5DF4C5721EE038C9006AE9BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5711EE038C9006AE9BD /* main.m */; };
+		5DF4C5751EE038C9006AE9BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5741EE038C9006AE9BD /* AppDelegate.m */; };
+		5DF4C5781EE038C9006AE9BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5771EE038C9006AE9BD /* ViewController.m */; };
+		5DF4C57B1EE038C9006AE9BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF4C5791EE038C9006AE9BD /* Main.storyboard */; };
+		5DF4C57D1EE038C9006AE9BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DF4C57C1EE038C9006AE9BD /* Assets.xcassets */; };
+		5DF4C5801EE038C9006AE9BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DF4C57E1EE038C9006AE9BD /* LaunchScreen.storyboard */; };
+		5DF4C58B1EE038C9006AE9BD /* misaki_workTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C58A1EE038C9006AE9BD /* misaki_workTests.m */; };
+		5DF4C5961EE038C9006AE9BD /* misaki_workUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5951EE038C9006AE9BD /* misaki_workUITests.m */; };
+		5DF4C5A51EE03CD5006AE9BD /* GoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5A41EE03CD5006AE9BD /* GoodsViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DF4C5871EE038C9006AE9BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DF4C5651EE038C9006AE9BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DF4C56C1EE038C9006AE9BD;
+			remoteInfo = misaki_work;
+		};
+		5DF4C5921EE038C9006AE9BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5DF4C5651EE038C9006AE9BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5DF4C56C1EE038C9006AE9BD;
+			remoteInfo = misaki_work;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5DF4C56D1EE038C9006AE9BD /* misaki_work.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = misaki_work.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF4C5711EE038C9006AE9BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5DF4C5731EE038C9006AE9BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5DF4C5741EE038C9006AE9BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5DF4C5761EE038C9006AE9BD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5DF4C5771EE038C9006AE9BD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5DF4C57A1EE038C9006AE9BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5DF4C57C1EE038C9006AE9BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DF4C57F1EE038C9006AE9BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DF4C5811EE038C9006AE9BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DF4C5861EE038C9006AE9BD /* misaki_workTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = misaki_workTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF4C58A1EE038C9006AE9BD /* misaki_workTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = misaki_workTests.m; sourceTree = "<group>"; };
+		5DF4C58C1EE038C9006AE9BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DF4C5911EE038C9006AE9BD /* misaki_workUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = misaki_workUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DF4C5951EE038C9006AE9BD /* misaki_workUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = misaki_workUITests.m; sourceTree = "<group>"; };
+		5DF4C5971EE038C9006AE9BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DF4C5A31EE03CD5006AE9BD /* GoodsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodsViewController.h; sourceTree = "<group>"; };
+		5DF4C5A41EE03CD5006AE9BD /* GoodsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodsViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5DF4C56A1EE038C9006AE9BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DF4C5831EE038C9006AE9BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DF4C58E1EE038C9006AE9BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5DF4C5641EE038C9006AE9BD = {
+			isa = PBXGroup;
+			children = (
+				5DF4C56F1EE038C9006AE9BD /* misaki_work */,
+				5DF4C5891EE038C9006AE9BD /* misaki_workTests */,
+				5DF4C5941EE038C9006AE9BD /* misaki_workUITests */,
+				5DF4C56E1EE038C9006AE9BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5DF4C56E1EE038C9006AE9BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5DF4C56D1EE038C9006AE9BD /* misaki_work.app */,
+				5DF4C5861EE038C9006AE9BD /* misaki_workTests.xctest */,
+				5DF4C5911EE038C9006AE9BD /* misaki_workUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5DF4C56F1EE038C9006AE9BD /* misaki_work */ = {
+			isa = PBXGroup;
+			children = (
+				5DF4C5731EE038C9006AE9BD /* AppDelegate.h */,
+				5DF4C5741EE038C9006AE9BD /* AppDelegate.m */,
+				5DF4C5761EE038C9006AE9BD /* ViewController.h */,
+				5DF4C5771EE038C9006AE9BD /* ViewController.m */,
+				5DF4C5A31EE03CD5006AE9BD /* GoodsViewController.h */,
+				5DF4C5A41EE03CD5006AE9BD /* GoodsViewController.m */,
+				5DF4C5791EE038C9006AE9BD /* Main.storyboard */,
+				5DF4C57C1EE038C9006AE9BD /* Assets.xcassets */,
+				5DF4C57E1EE038C9006AE9BD /* LaunchScreen.storyboard */,
+				5DF4C5811EE038C9006AE9BD /* Info.plist */,
+				5DF4C5701EE038C9006AE9BD /* Supporting Files */,
+			);
+			path = misaki_work;
+			sourceTree = "<group>";
+		};
+		5DF4C5701EE038C9006AE9BD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5DF4C5711EE038C9006AE9BD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5DF4C5891EE038C9006AE9BD /* misaki_workTests */ = {
+			isa = PBXGroup;
+			children = (
+				5DF4C58A1EE038C9006AE9BD /* misaki_workTests.m */,
+				5DF4C58C1EE038C9006AE9BD /* Info.plist */,
+			);
+			path = misaki_workTests;
+			sourceTree = "<group>";
+		};
+		5DF4C5941EE038C9006AE9BD /* misaki_workUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5DF4C5951EE038C9006AE9BD /* misaki_workUITests.m */,
+				5DF4C5971EE038C9006AE9BD /* Info.plist */,
+			);
+			path = misaki_workUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5DF4C56C1EE038C9006AE9BD /* misaki_work */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DF4C59A1EE038C9006AE9BD /* Build configuration list for PBXNativeTarget "misaki_work" */;
+			buildPhases = (
+				5DF4C5691EE038C9006AE9BD /* Sources */,
+				5DF4C56A1EE038C9006AE9BD /* Frameworks */,
+				5DF4C56B1EE038C9006AE9BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = misaki_work;
+			productName = misaki_work;
+			productReference = 5DF4C56D1EE038C9006AE9BD /* misaki_work.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DF4C5851EE038C9006AE9BD /* misaki_workTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DF4C59D1EE038C9006AE9BD /* Build configuration list for PBXNativeTarget "misaki_workTests" */;
+			buildPhases = (
+				5DF4C5821EE038C9006AE9BD /* Sources */,
+				5DF4C5831EE038C9006AE9BD /* Frameworks */,
+				5DF4C5841EE038C9006AE9BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DF4C5881EE038C9006AE9BD /* PBXTargetDependency */,
+			);
+			name = misaki_workTests;
+			productName = misaki_workTests;
+			productReference = 5DF4C5861EE038C9006AE9BD /* misaki_workTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5DF4C5901EE038C9006AE9BD /* misaki_workUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DF4C5A01EE038C9006AE9BD /* Build configuration list for PBXNativeTarget "misaki_workUITests" */;
+			buildPhases = (
+				5DF4C58D1EE038C9006AE9BD /* Sources */,
+				5DF4C58E1EE038C9006AE9BD /* Frameworks */,
+				5DF4C58F1EE038C9006AE9BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DF4C5931EE038C9006AE9BD /* PBXTargetDependency */,
+			);
+			name = misaki_workUITests;
+			productName = misaki_workUITests;
+			productReference = 5DF4C5911EE038C9006AE9BD /* misaki_workUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5DF4C5651EE038C9006AE9BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = takuto;
+				TargetAttributes = {
+					5DF4C56C1EE038C9006AE9BD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3553V7E3Q2;
+						ProvisioningStyle = Automatic;
+					};
+					5DF4C5851EE038C9006AE9BD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3553V7E3Q2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5DF4C56C1EE038C9006AE9BD;
+					};
+					5DF4C5901EE038C9006AE9BD = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 3553V7E3Q2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5DF4C56C1EE038C9006AE9BD;
+					};
+				};
+			};
+			buildConfigurationList = 5DF4C5681EE038C9006AE9BD /* Build configuration list for PBXProject "misaki_work" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5DF4C5641EE038C9006AE9BD;
+			productRefGroup = 5DF4C56E1EE038C9006AE9BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5DF4C56C1EE038C9006AE9BD /* misaki_work */,
+				5DF4C5851EE038C9006AE9BD /* misaki_workTests */,
+				5DF4C5901EE038C9006AE9BD /* misaki_workUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5DF4C56B1EE038C9006AE9BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF4C5801EE038C9006AE9BD /* LaunchScreen.storyboard in Resources */,
+				5DF4C57D1EE038C9006AE9BD /* Assets.xcassets in Resources */,
+				5DF4C57B1EE038C9006AE9BD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DF4C5841EE038C9006AE9BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DF4C58F1EE038C9006AE9BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5DF4C5691EE038C9006AE9BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF4C5781EE038C9006AE9BD /* ViewController.m in Sources */,
+				5DF4C5A51EE03CD5006AE9BD /* GoodsViewController.m in Sources */,
+				5DF4C5751EE038C9006AE9BD /* AppDelegate.m in Sources */,
+				5DF4C5721EE038C9006AE9BD /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DF4C5821EE038C9006AE9BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF4C58B1EE038C9006AE9BD /* misaki_workTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DF4C58D1EE038C9006AE9BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF4C5961EE038C9006AE9BD /* misaki_workUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DF4C5881EE038C9006AE9BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DF4C56C1EE038C9006AE9BD /* misaki_work */;
+			targetProxy = 5DF4C5871EE038C9006AE9BD /* PBXContainerItemProxy */;
+		};
+		5DF4C5931EE038C9006AE9BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5DF4C56C1EE038C9006AE9BD /* misaki_work */;
+			targetProxy = 5DF4C5921EE038C9006AE9BD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5DF4C5791EE038C9006AE9BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DF4C57A1EE038C9006AE9BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5DF4C57E1EE038C9006AE9BD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DF4C57F1EE038C9006AE9BD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5DF4C5981EE038C9006AE9BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5DF4C5991EE038C9006AE9BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DF4C59B1EE038C9006AE9BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3553V7E3Q2;
+				INFOPLIST_FILE = misaki_work/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takuto.dev.misaki-work";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		5DF4C59C1EE038C9006AE9BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3553V7E3Q2;
+				INFOPLIST_FILE = misaki_work/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takuto.dev.misaki-work";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		5DF4C59E1EE038C9006AE9BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3553V7E3Q2;
+				INFOPLIST_FILE = misaki_workTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takuto.dev.misaki-workTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/misaki_work.app/misaki_work";
+			};
+			name = Debug;
+		};
+		5DF4C59F1EE038C9006AE9BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3553V7E3Q2;
+				INFOPLIST_FILE = misaki_workTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takuto.dev.misaki-workTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/misaki_work.app/misaki_work";
+			};
+			name = Release;
+		};
+		5DF4C5A11EE038C9006AE9BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3553V7E3Q2;
+				INFOPLIST_FILE = misaki_workUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takuto.dev.misaki-workUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = misaki_work;
+			};
+			name = Debug;
+		};
+		5DF4C5A21EE038C9006AE9BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3553V7E3Q2;
+				INFOPLIST_FILE = misaki_workUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "takuto.dev.misaki-workUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = misaki_work;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5DF4C5681EE038C9006AE9BD /* Build configuration list for PBXProject "misaki_work" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DF4C5981EE038C9006AE9BD /* Debug */,
+				5DF4C5991EE038C9006AE9BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DF4C59A1EE038C9006AE9BD /* Build configuration list for PBXNativeTarget "misaki_work" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DF4C59B1EE038C9006AE9BD /* Debug */,
+				5DF4C59C1EE038C9006AE9BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5DF4C59D1EE038C9006AE9BD /* Build configuration list for PBXNativeTarget "misaki_workTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DF4C59E1EE038C9006AE9BD /* Debug */,
+				5DF4C59F1EE038C9006AE9BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5DF4C5A01EE038C9006AE9BD /* Build configuration list for PBXNativeTarget "misaki_workUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DF4C5A11EE038C9006AE9BD /* Debug */,
+				5DF4C5A21EE038C9006AE9BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5DF4C5651EE038C9006AE9BD /* Project object */;
+}
