@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DataSingleton.h"
+#import "RankingViewController.h"
 
 @interface ViewController ()
 {
@@ -60,6 +61,32 @@
 
 - (IBAction)allRanking:(id)sender
 {
+    [self performSegueWithIdentifier:@"RankingViewController" sender:[self createAllRanking]];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"RankingViewController"]) {
+        RankingViewController *rankingVC = segue.destinationViewController;
+        rankingVC.rankingArray = sender;
+    }
+}
+
+- (NSInteger)sumGoodNumber:(NSString *)number
+{
+    NSInteger sum = 0;
+    NSArray *goods = [[DataSingleton sharedManager] getAllCategoryGoods];
+    
+    for (NSString *goodsNumber in goods) {
+        if ([number isEqualToString:goodsNumber]) {
+            sum++;
+        }
+    }
+    return sum;
+}
+
+- (NSArray *)createAllRanking
+{
     NSArray *goods = [[DataSingleton sharedManager] getAllCategoryGoods];
     NSSet *set = [NSSet setWithArray:goods];
     NSArray *tmp = [set allObjects];
@@ -85,20 +112,7 @@
             }
         }
     }
-    NSLog(@"%@", ranking);
-}
-
-- (NSInteger)sumGoodNumber:(NSString *)number
-{
-    NSInteger sum = 0;
-    NSArray *goods = [[DataSingleton sharedManager] getAllCategoryGoods];
-    
-    for (NSString *goodsNumber in goods) {
-        if (number == goodsNumber) {
-            sum++;
-        }
-    }
-    return sum;
+    return ranking;
 }
 
 @end

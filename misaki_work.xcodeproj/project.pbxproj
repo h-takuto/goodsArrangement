@@ -11,6 +11,7 @@
 		5BCF5D181EE0F3B000BBF2D5 /* DataSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF5D171EE0F3B000BBF2D5 /* DataSingleton.m */; };
 		5BCF5D1A1EE128C500BBF2D5 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BCF5D191EE128C500BBF2D5 /* CustomCell.xib */; };
 		5BCF5D1D1EE1297800BBF2D5 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF5D1C1EE1297800BBF2D5 /* CustomTableViewCell.m */; };
+		5BCF5D201EE144BF00BBF2D5 /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF5D1F1EE144BF00BBF2D5 /* RankingViewController.m */; };
 		5DF4C5721EE038C9006AE9BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5711EE038C9006AE9BD /* main.m */; };
 		5DF4C5751EE038C9006AE9BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5741EE038C9006AE9BD /* AppDelegate.m */; };
 		5DF4C5781EE038C9006AE9BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5771EE038C9006AE9BD /* ViewController.m */; };
@@ -47,6 +48,8 @@
 		5BCF5D191EE128C500BBF2D5 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		5BCF5D1B1EE1297800BBF2D5 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		5BCF5D1C1EE1297800BBF2D5 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		5BCF5D1E1EE144BF00BBF2D5 /* RankingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingViewController.h; sourceTree = "<group>"; };
+		5BCF5D1F1EE144BF00BBF2D5 /* RankingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingViewController.m; sourceTree = "<group>"; };
 		5DF4C56D1EE038C9006AE9BD /* misaki_work.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = misaki_work.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF4C5711EE038C9006AE9BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DF4C5731EE038C9006AE9BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				5BCF5D141EE0EFE400BBF2D5 /* CategoryViewController.m */,
 				5DF4C5A31EE03CD5006AE9BD /* GoodsViewController.h */,
 				5DF4C5A41EE03CD5006AE9BD /* GoodsViewController.m */,
+				5BCF5D1E1EE144BF00BBF2D5 /* RankingViewController.h */,
+				5BCF5D1F1EE144BF00BBF2D5 /* RankingViewController.m */,
 				5BCF5D1B1EE1297800BBF2D5 /* CustomTableViewCell.h */,
 				5BCF5D1C1EE1297800BBF2D5 /* CustomTableViewCell.m */,
 				5BCF5D161EE0F3B000BBF2D5 /* DataSingleton.h */,
@@ -306,6 +311,7 @@
 				5DF4C5A51EE03CD5006AE9BD /* GoodsViewController.m in Sources */,
 				5DF4C5751EE038C9006AE9BD /* AppDelegate.m in Sources */,
 				5DF4C5721EE038C9006AE9BD /* main.m in Sources */,
+				5BCF5D201EE144BF00BBF2D5 /* RankingViewController.m in Sources */,
 				5BCF5D181EE0F3B000BBF2D5 /* DataSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
