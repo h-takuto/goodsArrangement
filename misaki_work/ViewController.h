@@ -12,6 +12,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *goodsNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *categoryField;
+@property (weak, nonatomic) IBOutlet UITextField *categoryTypeField;
 
 - (IBAction)addGoods:(id)sender;
 - (IBAction)addCategory:(id)sender;

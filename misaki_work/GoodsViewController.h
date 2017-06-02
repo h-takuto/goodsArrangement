@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GoodsViewController : UITableViewController
+@interface GoodsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property NSArray *goodsNumber;
-@property NSDictionary *category;
+@property NSString *category;
+@property (weak, nonatomic) IBOutlet UITableView *goodsTableView;
+@property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+@property (weak, nonatomic) IBOutlet UITextField *goodsNumberField;
+@property (weak, nonatomic) IBOutlet UIButton *addButton;
+- (IBAction)back:(id)sender;
 @end

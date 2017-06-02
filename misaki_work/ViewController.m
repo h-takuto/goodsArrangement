@@ -7,12 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "DataSingleton.h"
 
 @interface ViewController ()
 {
     NSUserDefaults *_userDefault;
     NSMutableArray *_goodsNumber;
-    NSMutableArray *_category;
+    NSMutableDictionary *_category;
 }
 
 @end
@@ -22,22 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-    _userDefault = [NSUserDefaults standardUserDefaults];
-    NSArray *categoryArray = [_userDefault arrayForKey:@"category"];
-    NSArray *goodsArray;
-    if (categoryArray != nil) {
-        _category = [[NSMutableArray alloc] initWithArray:categoryArray];
-        goodsArray = [_userDefault arrayForKey:[_category objectAtIndex:0]];
-        if (goodsArray != nil) {
-            _goodsNumber = [[NSMutableArray alloc] initWithArray:goodsArray];
-        } else {
-            _goodsNumber = [[NSMutableArray alloc] init];
-        }
-    } else {
-        _category = [[NSMutableArray alloc] init];
-        _goodsNumber = [[NSMutableArray alloc] init];
-    }
+    [DataSingleton sharedManager];
 }
 
 
@@ -50,21 +36,34 @@
 {
     NSString *num = self.goodsNumberField.text;
     [_goodsNumber addObject:num];
-    [_userDefault setObject:_goodsNumber forKey:[_category objectAtIndex:0]];
+//    [_userDefault setObject:_goodsNumber forKey:[_category objectAtIndex:0]];
     [_userDefault synchronize];
 }
 
 - (IBAction)addCategory:(id)sender
 {
-    [_category addObject:self.categoryField.text];
-    [_userDefault setObject:_category forKey:@"category"];
-    [_userDefault synchronize];
+    if (self.categoryField.text.length > 0) {
+        [[DataSingleton sharedManager] saveCategoriesObject:self.categoryTypeField.text forKey:self.categoryField.text];
+        self.categoryField.text = @"";
+        self.categoryTypeField.text = @"";
+    } else {
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"エラー" message:@"同じカテゴリがあるか入力されてないよ" preferredStyle:UIAlertControllerStyleAlert];
+        [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+            
+        }]];
+        [self presentViewController:alertController animated:YES completion:nil];
+    }
 }
 
 - (IBAction)removeData:(id)sender
 {
-    [_userDefault removeObjectForKey:@"category"];
-    [_userDefault removeObjectForKey:[_category objectAtIndex:0]];
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"データを削除します" message:@"消していい時は\"OK\"を押してね" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [[DataSingleton sharedManager] removeCategories];
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+    }]];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end
