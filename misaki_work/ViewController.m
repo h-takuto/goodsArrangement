@@ -32,14 +32,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)addGoods:(id)sender
-{
-    NSString *num = self.goodsNumberField.text;
-    [_goodsNumber addObject:num];
-//    [_userDefault setObject:_goodsNumber forKey:[_category objectAtIndex:0]];
-    [_userDefault synchronize];
-}
-
 - (IBAction)addCategory:(id)sender
 {
     if (self.categoryField.text.length > 0) {

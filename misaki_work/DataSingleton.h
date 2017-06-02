@@ -20,4 +20,8 @@
 - (BOOL)removeCategories;
 - (BOOL)removeCategory:(NSString *)category;
 - (BOOL)saveCategoriesObject:(id)object forKey:(NSString *)key;
+
+- (NSArray *)getGoodsNumbersCategory:(NSString *)category;
+
+- (BOOL)addGoodsNumber:(NSString *)number category:(NSString *)category;
 @end

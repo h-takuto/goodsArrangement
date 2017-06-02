@@ -38,11 +38,6 @@ static DataSingleton *_sharedData = nil;
     return self.categories;
 }
 
-- (NSArray *)getGoodsNumbersCategory:(NSString *)category
-{
-    return [_userDefault arrayForKey:category];
-}
-
 - (BOOL)saveCategoriesObject:(id)object forKey:(NSString *)key
 {
     if (key.length == 0 || key == nil) {
@@ -53,17 +48,32 @@ static DataSingleton *_sharedData = nil;
     return [_userDefault synchronize];
 }
 
-- (BOOL)removeCategories
-{
-    [self.categories removeAllObjects];
-    [_userDefault removeObjectForKey:@"categories"];
-    return [_userDefault synchronize];
-}
-
 - (BOOL)removeCategory:(NSString *)category;
 {
     [self.categories removeObjectForKey:category];
     [_userDefault setObject:_categories forKey:@"categories"];
+    return [_userDefault synchronize];
+}
+
+- (NSArray *)getGoodsNumbersCategory:(NSString *)category
+{
+    return [_userDefault arrayForKey:category];
+}
+
+- (BOOL)addGoodsNumber:(NSString *)number category:(NSString *)category
+{
+    NSArray *goodsArray = [_userDefault valueForKey:category];
+    NSMutableArray *saveArray = [[NSMutableArray alloc] initWithArray:goodsArray];
+    [saveArray addObject:number];
+    [_userDefault setValue:saveArray forKey:category];
+    return [_userDefault synchronize];
+}
+
+- (BOOL)removeCategories
+{
+    for (NSString *category in _categories) {
+        [_userDefault removeObjectForKey:category];
+    }
     return [_userDefault synchronize];
 }
 

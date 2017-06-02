@@ -14,6 +14,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.categoryLabel.text = self.category;
+    [DataSingleton sharedManager];
+}
+
+- (IBAction)addNumber:(id)sender {
+    if ([[DataSingleton sharedManager] addGoodsNumber:self.goodsNumberField.text category:self.category]) {
+        NSLog(@"ok");
+    }
+    
+    [self.goodsTableView reloadData];
+    self.goodsNumberField.text = @"";
 }
 
 - (IBAction)back:(id)sender
@@ -25,7 +35,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[DataSingleton sharedManager] getCategories].count;
+    return [[DataSingleton sharedManager] getGoodsNumbersCategory:self.category].count;
+//    return [[DataSingleton sharedManager] getCategories].count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -34,8 +45,9 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    NSArray *categories = [[DataSingleton sharedManager] getCategories].allKeys;
-    cell.textLabel.text = [categories objectAtIndex:indexPath.row];
+//    NSArray *goods = [[DataSingleton sharedManager] getCategories].allKeys;
+    NSArray *goods = [[DataSingleton sharedManager] getGoodsNumbersCategory:self.category];
+    cell.textLabel.text = [goods objectAtIndex:indexPath.row];
     return cell;
 }
 

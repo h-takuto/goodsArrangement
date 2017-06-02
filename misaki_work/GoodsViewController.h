@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UITextField *goodsNumberField;
 @property (weak, nonatomic) IBOutlet UIButton *addButton;
+- (IBAction)addNumber:(id)sender;
 - (IBAction)back:(id)sender;
 @end
