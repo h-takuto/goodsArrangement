@@ -10,6 +10,13 @@
 #import "CustomTableViewCell.h"
 #import "DataSingleton.h"
 
+@interface GoodsViewController ()
+{
+    BOOL _isRanking;
+}
+
+@end
+
 @implementation GoodsViewController
 
 - (void)viewDidLoad {
@@ -49,12 +56,42 @@
     [self.goodsTableView reloadData];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (IBAction)ranking:(id)sender
 {
     NSArray *goods = [[DataSingleton sharedManager] getGoodsNumbersCategory:self.category];
     NSSet *set = [NSSet setWithArray:goods];
     NSArray *tmp = [set allObjects];
-    return tmp.count;
+    NSMutableArray *quantityGoods = [[NSMutableArray alloc] init];
+    NSMutableArray *quantities = [[NSMutableArray alloc] init];
+    
+    for (NSString *number in tmp) {
+        NSInteger quantity = [self sumGoodNumber:number];
+        [quantityGoods addObject:[NSString stringWithFormat:@"%ld-%@", (long)quantity, number]];
+        [quantities addObject:[NSString stringWithFormat:@"%ld", (long)quantity]];
+    }
+    NSArray *sortedQuantities = [quantities sortedArrayUsingSelector:@selector(compare:)];
+    NSArray *reverseSorted = [[sortedQuantities reverseObjectEnumerator] allObjects];
+    
+    NSMutableArray *ranking = [[NSMutableArray alloc] init];
+    for (NSString *quantity in reverseSorted) {
+        for (NSString *qg in quantityGoods) {
+            NSArray *quanGoods = [qg componentsSeparatedByString:@"-"];
+            if ([[quanGoods objectAtIndex:0] isEqualToString:quantity]) {
+                [ranking addObject:quanGoods];
+                [quantityGoods removeObject:qg];
+                break;
+            }
+        }
+    }
+    NSLog(@"%@", ranking);
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+        NSArray *goods = [[DataSingleton sharedManager] getGoodsNumbersCategory:self.category];
+        NSSet *set = [NSSet setWithArray:goods];
+        NSArray *tmp = [set allObjects];
+        return tmp.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

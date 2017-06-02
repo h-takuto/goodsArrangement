@@ -19,4 +19,5 @@
 - (IBAction)back:(id)sender;
 - (IBAction)addQuantity:(id)sender;
 - (IBAction)decreaseQuanity:(id)sender;
+- (IBAction)ranking:(id)sender;
 @end
