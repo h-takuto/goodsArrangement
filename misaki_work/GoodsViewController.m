@@ -26,9 +26,13 @@
     
     UINib *nib = [UINib nibWithNibName:@"CustomCell" bundle:nil];
     [self.goodsTableView registerNib:nib forCellReuseIdentifier:@"cell"];
+    self.selectGoogsLabel.text = @"";
 }
 
 - (IBAction)addNumber:(id)sender {
+    if (self.goodsNumberField.text.length <= 0 && self.goodsNumberField.text.length == nil) {
+        return;
+    }
     if ([[DataSingleton sharedManager] addGoodsNumber:self.goodsNumberField.text category:self.category]) {
     }
     
@@ -45,6 +49,9 @@
 
 - (IBAction)addQuantity:(id)sender
 {
+    if (self.selectGoogsLabel.text.length <= 0 && self.selectGoogsLabel.text.length == nil) {
+        return;
+    }
     if ([[DataSingleton sharedManager] addGoodsNumber:self.selectGoogsLabel.text category:self.category]) {
     }
     [self.goodsTableView reloadData];
@@ -52,6 +59,9 @@
 
 - (IBAction)decreaseQuanity:(id)sender
 {
+    if (self.selectGoogsLabel.text.length <= 0 && self.selectGoogsLabel.text.length == nil) {
+        return;
+    }
     [[DataSingleton sharedManager] removeGoodsNumber:self.selectGoogsLabel.text category:self.category];
     [self.goodsTableView reloadData];
 }

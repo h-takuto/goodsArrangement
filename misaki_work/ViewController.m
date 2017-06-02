@@ -58,4 +58,47 @@
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
+- (IBAction)allRanking:(id)sender
+{
+    NSArray *goods = [[DataSingleton sharedManager] getAllCategoryGoods];
+    NSSet *set = [NSSet setWithArray:goods];
+    NSArray *tmp = [set allObjects];
+    NSMutableArray *quantityGoods = [[NSMutableArray alloc] init];
+    NSMutableArray *quantities = [[NSMutableArray alloc] init];
+    
+    for (NSString *number in tmp) {
+        NSInteger quantity = [self sumGoodNumber:number];
+        [quantityGoods addObject:[NSString stringWithFormat:@"%ld-%@", (long)quantity, number]];
+        [quantities addObject:[NSString stringWithFormat:@"%ld", (long)quantity]];
+    }
+    NSArray *sortedQuantities = [quantities sortedArrayUsingSelector:@selector(compare:)];
+    NSArray *reverseSorted = [[sortedQuantities reverseObjectEnumerator] allObjects];
+    
+    NSMutableArray *ranking = [[NSMutableArray alloc] init];
+    for (NSString *quantity in reverseSorted) {
+        for (NSString *qg in quantityGoods) {
+            NSArray *quanGoods = [qg componentsSeparatedByString:@"-"];
+            if ([[quanGoods objectAtIndex:0] isEqualToString:quantity]) {
+                [ranking addObject:quanGoods];
+                [quantityGoods removeObject:qg];
+                break;
+            }
+        }
+    }
+    NSLog(@"%@", ranking);
+}
+
+- (NSInteger)sumGoodNumber:(NSString *)number
+{
+    NSInteger sum = 0;
+    NSArray *goods = [[DataSingleton sharedManager] getAllCategoryGoods];
+    
+    for (NSString *goodsNumber in goods) {
+        if (number == goodsNumber) {
+            sum++;
+        }
+    }
+    return sum;
+}
+
 @end

@@ -13,7 +13,6 @@
     NSUserDefaults *_userDefault;
 }
 + (DataSingleton *)sharedManager;
-@property NSMutableArray *goodsNumbers;
 @property NSMutableDictionary *categories;
 
 - (NSDictionary *)getCategories;
@@ -22,7 +21,7 @@
 - (BOOL)saveCategoriesObject:(id)object forKey:(NSString *)key;
 
 - (NSArray *)getGoodsNumbersCategory:(NSString *)category;
-
+- (NSArray *)getAllCategoryGoods;
 - (BOOL)addGoodsNumber:(NSString *)number category:(NSString *)category;
 - (BOOL)removeGoodsNumber:(NSString *)number category:(NSString *)category;
 @end

@@ -66,6 +66,15 @@ static DataSingleton *_sharedData = nil;
     return [_userDefault arrayForKey:category];
 }
 
+- (NSArray *)getAllCategoryGoods
+{
+    NSMutableArray *allGoods = [[NSMutableArray alloc] init];
+    for (NSString *category in _categories.allKeys) {
+        [allGoods addObjectsFromArray:[_userDefault objectForKey:category]];
+    }
+    return allGoods;
+}
+
 - (BOOL)addGoodsNumber:(NSString *)number category:(NSString *)category
 {
     NSArray *goodsArray = [_userDefault valueForKey:category];

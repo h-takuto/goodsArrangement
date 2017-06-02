@@ -15,6 +15,7 @@
 
 - (IBAction)addCategory:(id)sender;
 - (IBAction)removeData:(id)sender;
+- (IBAction)allRanking:(id)sender;
 
 @end
 
