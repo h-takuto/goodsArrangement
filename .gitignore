@@ -1,14 +1,11 @@
-### https://raw.github.com/github/gitignore//Global/xcode.gitignore
+.DS_Store
+*.swp
+&~.nib
 
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-## Build generated
 build/
+release/
 DerivedData/
 
-## Various settings
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -19,9 +16,9 @@ DerivedData/
 !default.perspectivev3
 xcuserdata/
 
-## Other
 *.moved-aside
 *.xccheckout
 *.xcscmblueprint
 
-.DS_Store
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
