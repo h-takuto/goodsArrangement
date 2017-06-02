@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5BCF5D151EE0EFE400BBF2D5 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF5D141EE0EFE400BBF2D5 /* CategoryViewController.m */; };
 		5BCF5D181EE0F3B000BBF2D5 /* DataSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF5D171EE0F3B000BBF2D5 /* DataSingleton.m */; };
+		5BCF5D1A1EE128C500BBF2D5 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BCF5D191EE128C500BBF2D5 /* CustomCell.xib */; };
+		5BCF5D1D1EE1297800BBF2D5 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF5D1C1EE1297800BBF2D5 /* CustomTableViewCell.m */; };
 		5DF4C5721EE038C9006AE9BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5711EE038C9006AE9BD /* main.m */; };
 		5DF4C5751EE038C9006AE9BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5741EE038C9006AE9BD /* AppDelegate.m */; };
 		5DF4C5781EE038C9006AE9BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF4C5771EE038C9006AE9BD /* ViewController.m */; };
@@ -42,6 +44,9 @@
 		5BCF5D141EE0EFE400BBF2D5 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		5BCF5D161EE0F3B000BBF2D5 /* DataSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSingleton.h; sourceTree = "<group>"; };
 		5BCF5D171EE0F3B000BBF2D5 /* DataSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataSingleton.m; sourceTree = "<group>"; };
+		5BCF5D191EE128C500BBF2D5 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		5BCF5D1B1EE1297800BBF2D5 /* CustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		5BCF5D1C1EE1297800BBF2D5 /* CustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		5DF4C56D1EE038C9006AE9BD /* misaki_work.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = misaki_work.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DF4C5711EE038C9006AE9BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5DF4C5731EE038C9006AE9BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,9 +123,12 @@
 				5BCF5D141EE0EFE400BBF2D5 /* CategoryViewController.m */,
 				5DF4C5A31EE03CD5006AE9BD /* GoodsViewController.h */,
 				5DF4C5A41EE03CD5006AE9BD /* GoodsViewController.m */,
+				5BCF5D1B1EE1297800BBF2D5 /* CustomTableViewCell.h */,
+				5BCF5D1C1EE1297800BBF2D5 /* CustomTableViewCell.m */,
 				5BCF5D161EE0F3B000BBF2D5 /* DataSingleton.h */,
 				5BCF5D171EE0F3B000BBF2D5 /* DataSingleton.m */,
 				5DF4C5791EE038C9006AE9BD /* Main.storyboard */,
+				5BCF5D191EE128C500BBF2D5 /* CustomCell.xib */,
 				5DF4C57C1EE038C9006AE9BD /* Assets.xcassets */,
 				5DF4C57E1EE038C9006AE9BD /* LaunchScreen.storyboard */,
 				5DF4C5811EE038C9006AE9BD /* Info.plist */,
@@ -266,6 +274,7 @@
 			files = (
 				5DF4C5801EE038C9006AE9BD /* LaunchScreen.storyboard in Resources */,
 				5DF4C57D1EE038C9006AE9BD /* Assets.xcassets in Resources */,
+				5BCF5D1A1EE128C500BBF2D5 /* CustomCell.xib in Resources */,
 				5DF4C57B1EE038C9006AE9BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BCF5D151EE0EFE400BBF2D5 /* CategoryViewController.m in Sources */,
+				5BCF5D1D1EE1297800BBF2D5 /* CustomTableViewCell.m in Sources */,
 				5DF4C5781EE038C9006AE9BD /* ViewController.m in Sources */,
 				5DF4C5A51EE03CD5006AE9BD /* GoodsViewController.m in Sources */,
 				5DF4C5751EE038C9006AE9BD /* AppDelegate.m in Sources */,

@@ -136,7 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c70-zZ-7Hq">
-                                <rect key="frame" x="311" y="110" width="31" height="30"/>
+                                <rect key="frame" x="313" y="110" width="31" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="追加"/>
                                 <connections>
@@ -144,7 +144,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ph7-ZX-J3P">
-                                <rect key="frame" x="16" y="110" width="252" height="30"/>
+                                <rect key="frame" x="16" y="110" width="270" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -184,14 +184,37 @@
                                     <action selector="back:" destination="FYY-Vv-tE3" eventType="touchUpInside" id="4Wx-nP-kwk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vvL-H6-8as">
+                                <rect key="frame" x="314" y="162" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="decreaseQuanity:" destination="FYY-Vv-tE3" eventType="touchUpInside" id="rwR-qa-UOI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFM-UT-o3C">
+                                <rect key="frame" x="16" y="167" width="252" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5F-7H-JRm">
+                                <rect key="frame" x="276" y="163" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="addQuantity:" destination="FYY-Vv-tE3" eventType="touchUpInside" id="zBi-eR-B9y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="addButton" destination="c70-zZ-7Hq" id="zGJ-Ph-18l"/>
                         <outlet property="categoryLabel" destination="Yhk-wD-J4c" id="G6B-9b-uDx"/>
                         <outlet property="goodsNumberField" destination="ph7-ZX-J3P" id="kuZ-Qv-vKJ"/>
                         <outlet property="goodsTableView" destination="0fE-Qy-xoI" id="vFD-Mk-7XZ"/>
+                        <outlet property="selectGoogsLabel" destination="tFM-UT-o3C" id="cnf-ZK-En8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSk-zk-mA8" userLabel="First Responder" sceneMemberID="firstResponder"/>

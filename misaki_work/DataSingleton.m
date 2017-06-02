@@ -33,6 +33,9 @@ static DataSingleton *_sharedData = nil;
     return self;
 }
 
+#pragma mark -
+#pragma mark Category
+
 - (NSDictionary *)getCategories
 {
     return self.categories;
@@ -55,6 +58,9 @@ static DataSingleton *_sharedData = nil;
     return [_userDefault synchronize];
 }
 
+#pragma mark -
+#pragma mark Goods
+
 - (NSArray *)getGoodsNumbersCategory:(NSString *)category
 {
     return [_userDefault arrayForKey:category];
@@ -73,6 +79,22 @@ static DataSingleton *_sharedData = nil;
 {
     for (NSString *category in _categories) {
         [_userDefault removeObjectForKey:category];
+    }
+    return [_userDefault synchronize];
+}
+
+- (BOOL)removeGoodsNumber:(NSString *)number category:(NSString *)category
+{
+    NSArray *goodsArray = [_userDefault valueForKey:category];
+    NSMutableArray *tmp = [[NSMutableArray alloc] initWithArray:goodsArray];
+    int i = 0;
+    for (NSString *num in goodsArray) {
+        if (number == num) {
+            [tmp removeObjectAtIndex:i];
+            [_userDefault setValue:tmp forKey:category];
+            break;
+        }
+        i++;
     }
     return [_userDefault synchronize];
 }

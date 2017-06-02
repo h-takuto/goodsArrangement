@@ -13,8 +13,10 @@
 @property NSString *category;
 @property (weak, nonatomic) IBOutlet UITableView *goodsTableView;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
+@property (weak, nonatomic) IBOutlet UILabel *selectGoogsLabel;
 @property (weak, nonatomic) IBOutlet UITextField *goodsNumberField;
-@property (weak, nonatomic) IBOutlet UIButton *addButton;
 - (IBAction)addNumber:(id)sender;
 - (IBAction)back:(id)sender;
+- (IBAction)addQuantity:(id)sender;
+- (IBAction)decreaseQuanity:(id)sender;
 @end
