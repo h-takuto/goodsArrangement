@@ -70,7 +70,10 @@ static DataSingleton *_sharedData = nil;
 {
     NSMutableArray *allGoods = [[NSMutableArray alloc] init];
     for (NSString *category in _categories.allKeys) {
-        [allGoods addObjectsFromArray:[_userDefault objectForKey:category]];
+        NSArray *goods = [_userDefault objectForKey:category];
+        for (NSString *str in goods) {
+            [allGoods addObject:[NSString stringWithFormat:@"%@-%@", str, category]];
+        }
     }
     return allGoods;
 }
