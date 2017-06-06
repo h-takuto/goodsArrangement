@@ -20,13 +20,8 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[DataSingleton sharedManager] getCategories].count;
+    return [[DataSingleton sharedManager] getCategories].allKeys.count;
 }
-
-//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-//{
-//    
-//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -34,7 +29,8 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     }
-    NSArray *categories = [[DataSingleton sharedManager] getCategories].allKeys;
+    
+    NSArray *categories = [self sortCategory];
     cell.textLabel.text = [categories objectAtIndex:indexPath.row];
     return cell;
 }
@@ -63,6 +59,29 @@
 {
     GoodsViewController *goodsVC = segue.destinationViewController;
     goodsVC.category = sender;
+}
+
+- (NSArray *)sortCategory
+{
+    NSDictionary *dic = [[DataSingleton sharedManager] getCategories];
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (id key in [dic keyEnumerator]) {
+        if ([[dic valueForKey:key] isEqualToString:@"9"]) {
+            [array addObject:key];
+        }
+    }
+    for (id key in [dic keyEnumerator]) {
+        if ([[dic valueForKey:key] isEqualToString:@"10"]) {
+            [array addObject:key];
+        }
+    }
+    for (id key in [dic keyEnumerator]) {
+        if (![[dic valueForKey:key] isEqualToString:@"9"] && ![[dic valueForKey:key] isEqualToString:@"10"]) {
+            [array addObject:key];
+        }
+    }
+    
+    return array;
 }
 
 @end
