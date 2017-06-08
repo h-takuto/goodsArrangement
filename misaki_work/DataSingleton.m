@@ -78,6 +78,25 @@ static DataSingleton *_sharedData = nil;
     return allGoods;
 }
 
+- (NSArray *)getCategoryGoods:(NSString *)categoryNum
+{
+    NSMutableArray *array = [[NSMutableArray alloc] init];
+    for (id key in [_categories keyEnumerator]) {
+        if ([[_categories valueForKey:key] isEqualToString:categoryNum]) {
+            [array addObject:key];
+        }
+    }
+    
+    NSMutableArray *categoryGoods = [[NSMutableArray alloc] init];
+    for (NSString *category in array) {
+        NSArray *goods = [_userDefault objectForKey:category];
+        for (NSString *str in goods) {
+            [categoryGoods addObject:[NSString stringWithFormat:@"%@-%@", str, category]];
+        }
+    }
+    return categoryGoods;
+}
+
 - (BOOL)addGoodsNumber:(NSString *)number category:(NSString *)category
 {
     NSArray *goodsArray = [_userDefault valueForKey:category];

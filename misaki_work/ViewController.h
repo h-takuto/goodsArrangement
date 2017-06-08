@@ -16,6 +16,8 @@
 - (IBAction)addCategory:(id)sender;
 - (IBAction)removeData:(id)sender;
 - (IBAction)allRanking:(id)sender;
+- (IBAction)clothesRanking:(id)sender;
+- (IBAction)goodsRanking:(id)sender;
 
 @end
 

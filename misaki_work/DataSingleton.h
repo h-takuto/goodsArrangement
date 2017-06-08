@@ -22,6 +22,7 @@
 
 - (NSArray *)getGoodsNumbersCategory:(NSString *)category;
 - (NSArray *)getAllCategoryGoods;
+- (NSArray *)getCategoryGoods:(NSString *)categoryNum;
 - (BOOL)addGoodsNumber:(NSString *)number category:(NSString *)category;
 - (BOOL)removeGoodsNumber:(NSString *)number category:(NSString *)category;
 @end

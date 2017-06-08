@@ -64,6 +64,16 @@
     [self performSegueWithIdentifier:@"RankingViewController" sender:[self createAllRanking]];
 }
 
+- (IBAction)clothesRanking:(id)sender
+{
+    [self performSegueWithIdentifier:@"RankingViewController" sender:[self createClothesRanking]];
+}
+
+- (IBAction)goodsRanking:(id)sender
+{
+    [self performSegueWithIdentifier:@"RankingViewController" sender:[self createGoodsRanking]];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"RankingViewController"]) {
@@ -88,6 +98,66 @@
 - (NSArray *)createAllRanking
 {
     NSArray *goods = [[DataSingleton sharedManager] getAllCategoryGoods];
+    NSSet *set = [NSSet setWithArray:goods];
+    NSArray *tmp = [set allObjects];
+    NSMutableArray *quantityGoods = [[NSMutableArray alloc] init];
+    NSMutableArray *quantities = [[NSMutableArray alloc] init];
+    
+    for (NSString *number in tmp) {
+        NSInteger quantity = [self sumGoodNumber:number];
+        [quantityGoods addObject:[NSString stringWithFormat:@"%ld-%@", (long)quantity, number]];
+        [quantities addObject:[NSString stringWithFormat:@"%ld", (long)quantity]];
+    }
+    NSArray *sortedQuantities = [quantities sortedArrayUsingSelector:@selector(compare:)];
+    NSArray *reverseSorted = [[sortedQuantities reverseObjectEnumerator] allObjects];
+    
+    NSMutableArray *ranking = [[NSMutableArray alloc] init];
+    for (NSString *quantity in reverseSorted) {
+        for (NSString *qg in quantityGoods) {
+            NSArray *quanGoods = [qg componentsSeparatedByString:@"-"];
+            if ([[quanGoods objectAtIndex:0] isEqualToString:quantity]) {
+                [ranking addObject:quanGoods];
+                [quantityGoods removeObject:qg];
+                break;
+            }
+        }
+    }
+    return ranking;
+}
+
+- (NSArray *)createClothesRanking
+{
+    NSArray *goods = [[DataSingleton sharedManager] getCategoryGoods:@"9"];
+    NSSet *set = [NSSet setWithArray:goods];
+    NSArray *tmp = [set allObjects];
+    NSMutableArray *quantityGoods = [[NSMutableArray alloc] init];
+    NSMutableArray *quantities = [[NSMutableArray alloc] init];
+    
+    for (NSString *number in tmp) {
+        NSInteger quantity = [self sumGoodNumber:number];
+        [quantityGoods addObject:[NSString stringWithFormat:@"%ld-%@", (long)quantity, number]];
+        [quantities addObject:[NSString stringWithFormat:@"%ld", (long)quantity]];
+    }
+    NSArray *sortedQuantities = [quantities sortedArrayUsingSelector:@selector(compare:)];
+    NSArray *reverseSorted = [[sortedQuantities reverseObjectEnumerator] allObjects];
+    
+    NSMutableArray *ranking = [[NSMutableArray alloc] init];
+    for (NSString *quantity in reverseSorted) {
+        for (NSString *qg in quantityGoods) {
+            NSArray *quanGoods = [qg componentsSeparatedByString:@"-"];
+            if ([[quanGoods objectAtIndex:0] isEqualToString:quantity]) {
+                [ranking addObject:quanGoods];
+                [quantityGoods removeObject:qg];
+                break;
+            }
+        }
+    }
+    return ranking;
+}
+
+- (NSArray *)createGoodsRanking
+{
+    NSArray *goods = [[DataSingleton sharedManager] getCategoryGoods:@"10"];
     NSSet *set = [NSSet setWithArray:goods];
     NSArray *tmp = [set allObjects];
     NSMutableArray *quantityGoods = [[NSMutableArray alloc] init];
